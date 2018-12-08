@@ -10,6 +10,11 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_005_deploytask_0.1</module>
+    <module>jobs/process/Common/Automation/jo_ci_002_deploytasks_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_003_gettaskid_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_002_updatetask_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_001_createtask_0.1</module>
   </modules>
   <properties>
     <talend.project.name>THIRDPROJ</talend.project.name>
