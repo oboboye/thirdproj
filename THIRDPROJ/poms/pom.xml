@@ -15,6 +15,12 @@
     <module>jobs/joblets/Common/Automation/jl_ci_003_gettaskid_0.1</module>
     <module>jobs/joblets/Common/Automation/jl_ci_002_updatetask_0.1</module>
     <module>jobs/joblets/Common/Automation/jl_ci_001_createtask_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_002_updateesbtask_a_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_005_deployesbtask_a_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_007_undeployesbtask_a_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_001_createesbtask_a_0.1</module>
+    <module>jobs/process/Common/Automation/ci_002_createesbtasks_fileinput_main_0.1</module>
+    <module>jobs/joblets/Common/Automation/jl_ci_003_getesbtaskid_a_0.1</module>
   </modules>
   <properties>
     <talend.project.name>THIRDPROJ</talend.project.name>
