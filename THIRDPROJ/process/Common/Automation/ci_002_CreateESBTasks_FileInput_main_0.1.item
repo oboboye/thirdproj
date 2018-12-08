@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="enableContexDump" prompt="enableContexDump?" promptNeeded="false" repositoryContextId="_OBSmYMOvEeevAohFEeVf-g" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="enableSpecificJobLoad" prompt="enableSpecificJobLoad?" promptNeeded="false" repositoryContextId="_OBSmYMOvEeevAohFEeVf-g" type="id_Boolean" value="false"/>
-    <contextParameter comment="" name="enableSpecificProjectLoad" prompt="enableSpecificProjectLoad?" promptNeeded="false" repositoryContextId="_OBSmYMOvEeevAohFEeVf-g" type="id_Boolean" value="false"/>
-    <contextParameter comment="" name="commonPropertiesFilePath" prompt="commonPropertiesFilePath?" promptNeeded="false" repositoryContextId="_F2Y5IMXVEeansOym92b9eg" type="id_String" value="/opt/talend/config/common.properties"/>
-    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" repositoryContextId="_F2Y5IMXVEeansOym92b9eg" type="id_String" value="default"/>
-    <contextParameter comment="" name="specificPropertiesPath" prompt="specificPropertiesPath?" promptNeeded="false" repositoryContextId="_F2Y5IMXVEeansOym92b9eg" type="id_String" value="/opt/talend/config/"/>
-    <contextParameter comment="" name="MQ_ErrorHandling_BrokersList" prompt="MQ_ErrorHandling_BrokersList?" promptNeeded="false" repositoryContextId="_igy10MXaEeansOym92b9eg" type="id_String" value="tcp://tal-exec.dev.univaremeamdm.net:61616"/>
-    <contextParameter comment="" name="MQ_ErrorHandling_QueueName" prompt="MQ_ErrorHandling_QueueName?" promptNeeded="false" repositoryContextId="_igy10MXaEeansOym92b9eg" type="id_String" value="TalendErrorHandling"/>
+    <contextParameter comment="" name="enableContexDump" prompt="enableContexDump?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter comment="" name="enableSpecificJobLoad" prompt="enableSpecificJobLoad?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="enableSpecificProjectLoad" prompt="enableSpecificProjectLoad?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="commonPropertiesFilePath" prompt="commonPropertiesFilePath?" promptNeeded="false" type="id_String" value="/opt/talend/config/common.properties"/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" type="id_String" value="default"/>
+    <contextParameter comment="" name="specificPropertiesPath" prompt="specificPropertiesPath?" promptNeeded="false" type="id_String" value="/opt/talend/config/"/>
+    <contextParameter comment="" name="MQ_ErrorHandling_BrokersList" prompt="MQ_ErrorHandling_BrokersList?" promptNeeded="false" type="id_String" value="tcp://tal-exec.dev.univaremeamdm.net:61616"/>
+    <contextParameter comment="" name="MQ_ErrorHandling_QueueName" prompt="MQ_ErrorHandling_QueueName?" promptNeeded="false" type="id_String" value="TalendErrorHandling"/>
     <contextParameter comment="" name="TALEND_AMC_AdditionalParams" prompt="TALEND_AMC_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="TALEND_AMC_Database" prompt="TALEND_AMC_Database?" promptNeeded="false" type="id_String" value="talend_amc"/>
     <contextParameter comment="" name="TALEND_AMC_Login" prompt="TALEND_AMC_Login?" promptNeeded="false" type="id_String" value="sa_talend_amc"/>
@@ -22,40 +22,40 @@
     <contextParameter comment="" name="TALEND_CEH_Port" prompt="TALEND_CEH_Port?" promptNeeded="false" type="id_String" value="1433"/>
     <contextParameter comment="" name="TALEND_CEH_Schema" prompt="TALEND_CEH_Schema?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="TALEND_CEH_Server" prompt="TALEND_CEH_Server?" promptNeeded="false" type="id_String" value="uwdevdb.srv.lu.se"/>
-    <contextParameter comment="" name="MQ_ContextManagement_TopicName" prompt="MQ_ContextManagement_TopicName?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="talend.contextmanagement.topic"/>
-    <contextParameter comment="" name="MQ_ContextManagementBroker_1" prompt="MQ_ContextManagementBroker_1?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="tal-exec.dev.univaremeamdm.net"/>
-    <contextParameter comment="" name="MQ_ContextManagementBroker_2" prompt="MQ_ContextManagementBroker_2?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="MQ_ContextManagementPort_1" prompt="MQ_ContextManagementPort_1?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="61616"/>
-    <contextParameter comment="" name="MQ_ContextManagementPort_2" prompt="MQ_ContextManagementPort_2?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_AuthPass" prompt="TALEND_CI_AuthPass?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="admin"/>
-    <contextParameter comment="" name="TALEND_CI_AuthUser" prompt="TALEND_CI_AuthUser?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="security@company.com"/>
-    <contextParameter comment="" name="TALEND_CI_ESB_SERVER" prompt="TALEND_CI_ESB_SERVER?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;localRuntime&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_TAC_Metaservlet_URL" prompt="TALEND_CI_TAC_Metaservlet_URL?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;http://win-snebiiq5ir6:8080/org.talend.administrator/metaServlet?&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_taskESBFilePath" prompt="TALEND_CI_taskESBFilePath?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;/opt/talend/config/ESBTaskDeployment.csv&quot;"/>
-    <contextParameter comment="" name="TALEND_KEYSTORE_PASS" prompt="TALEND_KEYSTORE_PASS?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_Password" value="F+0RMMgEkV3W/4vfGEabQA=="/>
-    <contextParameter comment="" name="TALEND_KEYSTORE_PATH" prompt="TALEND_KEYSTORE_PATH?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;D:/Java/jdk1.8.0_141/jre/lib/security/cacerts&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_SSH_HOST" prompt="TALEND_CI_SSH_HOST?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="tal-exec.dev.univaremeamdm.net"/>
-    <contextParameter comment="" name="TALEND_CI_SSH_PORT" prompt="TALEND_CI_SSH_PORT?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="8101"/>
-    <contextParameter comment="" name="TALEND_CI_SSH_USER" prompt="TALEND_CI_SSH_USER?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;tadmin&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_SSH_PASS" prompt="TALEND_CI_SSH_PASS?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;tadmin&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_taskESBConfigPath" prompt="TALEND_CI_taskESBConfigPath?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;D:/Talend/Talend-6.4.1/esb/container-app/etc/&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_taskFilePath" prompt="TALEND_CI_taskFilePath?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="C:/Talend/files/TaskDeployment.csv"/>
-    <contextParameter comment="" name="TALEND_CI_UpdateESBContext" prompt="TALEND_CI_UpdateESBContext?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;C:/Talend/files/ESBContextUpdate.csv&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_ListSource" prompt="TALEND_CI_ListSource?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="D:/CI_ROOT/parsingTool/SourceFiles/"/>
-    <contextParameter comment="" name="TALEND_CI_ListTarget" prompt="TALEND_CI_ListTarget?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="D:/CI_ROOT/parsingTool/TargetFiles/"/>
-    <contextParameter comment="" name="TALEND_CI_Project" prompt="TALEND_CI_Project?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;GIT_TEST&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_Version" prompt="TALEND_CI_Version?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;0.0.1-SNAPSHOT&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_TAC_URL" prompt="TALEND_CI_TAC_URL?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="http://tal-admin.dev.univaremeamdm.net:8080/Tac"/>
-    <contextParameter comment="" name="TALEND_CI_BUILD_PATH" prompt="TALEND_CI_BUILD_PATH?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="D:/CI_ROOT/commandline_workspace/projectSources/"/>
-    <contextParameter comment="" name="TALEND_CI_NEXUS_URL" prompt="TALEND_CI_NEXUS_URL?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="http://deploy.mgmt.univaremeamdm.net:8081/nexus"/>
-    <contextParameter comment="" name="TALEND_CI_NEXUS_PASSWORD" prompt="TALEND_CI_NEXUS_PASSWORD?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;Talend123&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_NEXUS_USER" prompt="TALEND_CI_NEXUS_USER?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_Project_Branch" prompt="TALEND_CI_Project_Branch?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;master&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_JOB_SERVER" prompt="TALEND_CI_JOB_SERVER?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;dev_jobserver&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_JOB_CONTEXT" prompt="TALEND_CI_JOB_CONTEXT?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;Default&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_GROUP" prompt="TALEND_CI_GROUP?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;org.talend&quot;"/>
-    <contextParameter comment="" name="TALEND_CI_TriggersFilePath" prompt="TALEND_CI_TriggersFilePath?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="D:/CI_ROOT/parsingTool/TargetFiles/Triggers.csv"/>
-    <contextParameter comment="" name="TALEND_CI_ARCHIVE_PATH" prompt="TALEND_CI_ARCHIVE_PATH?" promptNeeded="false" repositoryContextId="_pVPuUMhmEeenNZ0R3xTjAA" type="id_String" value="&quot;D:/CI_ROOT/parsingTool/Archive/&quot;"/>
+    <contextParameter comment="" name="MQ_ContextManagement_TopicName" prompt="MQ_ContextManagement_TopicName?" promptNeeded="false" type="id_String" value="talend.contextmanagement.topic"/>
+    <contextParameter comment="" name="MQ_ContextManagementBroker_1" prompt="MQ_ContextManagementBroker_1?" promptNeeded="false" type="id_String" value="tal-exec.dev.univaremeamdm.net"/>
+    <contextParameter comment="" name="MQ_ContextManagementBroker_2" prompt="MQ_ContextManagementBroker_2?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="MQ_ContextManagementPort_1" prompt="MQ_ContextManagementPort_1?" promptNeeded="false" type="id_String" value="61616"/>
+    <contextParameter comment="" name="MQ_ContextManagementPort_2" prompt="MQ_ContextManagementPort_2?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_AuthPass" prompt="TALEND_CI_AuthPass?" promptNeeded="false" type="id_String" value="admin"/>
+    <contextParameter comment="" name="TALEND_CI_AuthUser" prompt="TALEND_CI_AuthUser?" promptNeeded="false" type="id_String" value="security@company.com"/>
+    <contextParameter comment="" name="TALEND_CI_ESB_SERVER" prompt="TALEND_CI_ESB_SERVER?" promptNeeded="false" type="id_String" value="&quot;localRuntime&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_TAC_Metaservlet_URL" prompt="TALEND_CI_TAC_Metaservlet_URL?" promptNeeded="false" type="id_String" value="&quot;http://win-snebiiq5ir6:8080/org.talend.administrator/metaServlet?&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_taskESBFilePath" prompt="TALEND_CI_taskESBFilePath?" promptNeeded="false" type="id_String" value="&quot;/opt/talend/config/ESBTaskDeployment.csv&quot;"/>
+    <contextParameter comment="" name="TALEND_KEYSTORE_PASS" prompt="TALEND_KEYSTORE_PASS?" promptNeeded="false" type="id_Password" value="F+0RMMgEkV3W/4vfGEabQA=="/>
+    <contextParameter comment="" name="TALEND_KEYSTORE_PATH" prompt="TALEND_KEYSTORE_PATH?" promptNeeded="false" type="id_String" value="&quot;D:/Java/jdk1.8.0_141/jre/lib/security/cacerts&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_SSH_HOST" prompt="TALEND_CI_SSH_HOST?" promptNeeded="false" type="id_String" value="tal-exec.dev.univaremeamdm.net"/>
+    <contextParameter comment="" name="TALEND_CI_SSH_PORT" prompt="TALEND_CI_SSH_PORT?" promptNeeded="false" type="id_String" value="8101"/>
+    <contextParameter comment="" name="TALEND_CI_SSH_USER" prompt="TALEND_CI_SSH_USER?" promptNeeded="false" type="id_String" value="&quot;tadmin&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_SSH_PASS" prompt="TALEND_CI_SSH_PASS?" promptNeeded="false" type="id_String" value="&quot;tadmin&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_taskESBConfigPath" prompt="TALEND_CI_taskESBConfigPath?" promptNeeded="false" type="id_String" value="&quot;D:/Talend/Talend-6.4.1/esb/container-app/etc/&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_taskFilePath" prompt="TALEND_CI_taskFilePath?" promptNeeded="false" type="id_String" value="C:/Talend/files/TaskDeployment.csv"/>
+    <contextParameter comment="" name="TALEND_CI_UpdateESBContext" prompt="TALEND_CI_UpdateESBContext?" promptNeeded="false" type="id_String" value="&quot;C:/Talend/files/ESBContextUpdate.csv&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_ListSource" prompt="TALEND_CI_ListSource?" promptNeeded="false" type="id_String" value="D:/CI_ROOT/parsingTool/SourceFiles/"/>
+    <contextParameter comment="" name="TALEND_CI_ListTarget" prompt="TALEND_CI_ListTarget?" promptNeeded="false" type="id_String" value="D:/CI_ROOT/parsingTool/TargetFiles/"/>
+    <contextParameter comment="" name="TALEND_CI_Project" prompt="TALEND_CI_Project?" promptNeeded="false" type="id_String" value="&quot;GIT_TEST&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_Version" prompt="TALEND_CI_Version?" promptNeeded="false" type="id_String" value="&quot;0.0.1-SNAPSHOT&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_TAC_URL" prompt="TALEND_CI_TAC_URL?" promptNeeded="false" type="id_String" value="http://tal-admin.dev.univaremeamdm.net:8080/Tac"/>
+    <contextParameter comment="" name="TALEND_CI_BUILD_PATH" prompt="TALEND_CI_BUILD_PATH?" promptNeeded="false" type="id_String" value="D:/CI_ROOT/commandline_workspace/projectSources/"/>
+    <contextParameter comment="" name="TALEND_CI_NEXUS_URL" prompt="TALEND_CI_NEXUS_URL?" promptNeeded="false" type="id_String" value="http://deploy.mgmt.univaremeamdm.net:8081/nexus"/>
+    <contextParameter comment="" name="TALEND_CI_NEXUS_PASSWORD" prompt="TALEND_CI_NEXUS_PASSWORD?" promptNeeded="false" type="id_String" value="&quot;Talend123&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_NEXUS_USER" prompt="TALEND_CI_NEXUS_USER?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_Project_Branch" prompt="TALEND_CI_Project_Branch?" promptNeeded="false" type="id_String" value="&quot;master&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_JOB_SERVER" prompt="TALEND_CI_JOB_SERVER?" promptNeeded="false" type="id_String" value="&quot;dev_jobserver&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_JOB_CONTEXT" prompt="TALEND_CI_JOB_CONTEXT?" promptNeeded="false" type="id_String" value="&quot;Default&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_GROUP" prompt="TALEND_CI_GROUP?" promptNeeded="false" type="id_String" value="&quot;org.talend&quot;"/>
+    <contextParameter comment="" name="TALEND_CI_TriggersFilePath" prompt="TALEND_CI_TriggersFilePath?" promptNeeded="false" type="id_String" value="D:/CI_ROOT/parsingTool/TargetFiles/Triggers.csv"/>
+    <contextParameter comment="" name="TALEND_CI_ARCHIVE_PATH" prompt="TALEND_CI_ARCHIVE_PATH?" promptNeeded="false" type="id_String" value="&quot;D:/CI_ROOT/parsingTool/Archive/&quot;"/>
     <contextParameter comment="" name="values" prompt="values?" promptNeeded="false" type="id_String" value="{&quot;firstname&quot;:&quot;Olu&quot;,&quot;lastname&quot;:&quot;Boboye&quot;}"/>
   </context>
   <parameters>
@@ -82,11 +82,11 @@
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="true"/>
     <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
-    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="true"/>
-    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="true"/>
-    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
-    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="context.commonPropertiesFilePath"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;=&quot;"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
@@ -105,18 +105,18 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
-    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/oboboye/workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/Administrator/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -206,6 +206,8 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_iQFlkJdTEeifzv_z6bUDBg-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
@@ -268,8 +270,8 @@
     <elementParameter field="TABLE" name="GROUPBYS"/>
     <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
     <elementParameter field="CHECK" name="COMPACT_FORMAT" show="false" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="QUOTE_ALL_VALUES" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWriteJSONField_1">
       <column comment="" key="false" length="-1" name="JSON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -282,6 +284,8 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_iQFlkJdTEeifzv_z6bUDBg-tMap_6-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
@@ -387,6 +391,7 @@
   <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractJSONFields_1"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
     <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="string"/>
     <elementParameter field="TEXT" name="LOOP_QUERY" show="false" value="&quot;/result&quot;"/>
     <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.result&quot;"/>
@@ -411,8 +416,8 @@
     <elementParameter field="TEXT" name="DESTINATION" show="false" value="tExtractJSONFields_1"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" show="false" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="SPLIT_LIST" value="false"/>
     <metadata connector="FLOW" name="tExtractJSONFields_1">
       <column key="false" length="4048" name="taskId" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="taskName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -433,6 +438,8 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_iQFlkJdTEeifzv_z6bUDBg-tMap_5-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
@@ -830,101 +837,6 @@
       <column comment="" key="false" length="0" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.TALEND_CI_taskESBFilePath"/>
-    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
-    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HEADER" value="1"/>
-    <elementParameter field="TEXT" name="FOOTER" value="0"/>
-    <elementParameter field="TEXT" name="LIMIT" value=""/>
-    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
-    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" show="false" value="_ZcPisMSfEeevAohFEeVf-g - metadata"/>
-    <elementParameter field="DIRECTORY" name="TEMP_DIR" show="false" value="&quot;C:/Talend/dev_workspace&quot;"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="RANDOM" value="false"/>
-    <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
-    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
-    <elementParameter field="TABLE" name="TRIMSELECT">
-      <elementValue elementRef="SCHEMA_COLUMN" value="actionName"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureName"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureProject"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureType"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureUrl"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureVersion"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="repository"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="context"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
-    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
-    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="actionName"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureName"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureProject"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureType"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureUrl"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="featureVersion"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="repository"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="context"/>
-      <elementValue elementRef="DECODE" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="CreateAndScheduleTasks"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tFileInputDelimited_4">
-      <column comment="" key="false" length="0" name="actionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureProject" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureUrl" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureVersion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="repository" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="context" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" label="metadata" name="REJECT">
-      <column comment="" key="false" length="0" name="actionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureProject" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureUrl" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureVersion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="repository" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="context" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-672" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_5"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
@@ -1063,6 +975,8 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_iQFlkJdTEeifzv_z6bUDBg-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
@@ -1397,6 +1311,8 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_iQFlkJdTEeifzv_z6bUDBg-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
@@ -1497,6 +1413,8 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_iQFlkJdTEeifzv_z6bUDBg-tMap_7-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
@@ -1550,6 +1468,8 @@
     <elementParameter field="IMAGE" name="PREVIEW" value="_iQFlkJdTEeifzv_z6bUDBg-tMap_4-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
@@ -1589,172 +1509,6 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <metadata connector="FLOW" name="jl_ci_005_deployESBTask_a_2">
-      <column comment="" key="false" length="-1" name="CreateTaskactionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="authPass" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="taskId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="jl_ci_007_undeployESBTask" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jl_ci_007_undeployESBTask_1"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <metadata connector="FLOW" name="jl_ci_007_undeployESBTask_1">
-      <column comment="" key="false" length="0" name="actionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column key="false" length="4048" name="taskId" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authPass" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="jl_ci_002_updateESBTask" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="704" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jl_ci_002_updateESBTask_1"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TEXT" name="LABEL" value="jl_ci_002_updateESBTask"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <metadata connector="FLOW" name="jl_ci_002_updateESBTask_1">
-      <column comment="" key="false" length="0" name="actionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authPass" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureUrl" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureVersion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="repository" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimeContext" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimePropertyId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimeServerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="tag" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="taskName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column key="false" length="4048" name="taskId" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="context" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="OUTPUT_1" name="OUTPUT_1">
-      <column comment="" key="false" length="0" name="actionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authPass" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureUrl" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureVersion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="repository" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimeContext" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimePropertyId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimeServerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="tag" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="taskName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column key="false" length="4048" name="taskId" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="jl_ci_005_deployESBTask" componentVersion="0.1" offsetLabelX="50" offsetLabelY="0" posX="896" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jl_ci_005_deployESBTask_2"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TEXT" name="LABEL" value="jl_ci_005_deployESBTask"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <metadata connector="FLOW" name="jl_ci_005_deployESBTask_2">
-      <column comment="" key="false" length="-1" name="CreateTaskactionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="authPass" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="taskId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="jl_ci_001_createESBTask" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jl_ci_001_createESBTask_2"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TEXT" name="LABEL" value="jl_ci_001_createESBTask"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <metadata connector="FLOW" name="jl_ci_001_createESBTask_2">
-      <column comment="" key="false" length="0" name="actionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authPass" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureUrl" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="featureVersion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="repository" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimeContext" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimePropertyId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="runtimeServerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="tag" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="taskName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="context" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="OUTPUT_1" name="OUTPUT_1">
-      <column comment="" key="false" length="-1" name="taskName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="jl_ci_003_getESBTaskID" componentVersion="0.1" offsetLabelX="11" offsetLabelY="0" posX="288" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jl_ci_003_getESBTaskID_1"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TEXT" name="LABEL" value="jl_ci_003_getESBTaskID"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <metadata connector="FLOW" name="jl_ci_003_getESBTaskID_1">
-      <column comment="" key="false" length="-1" name="authUser" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="authPass" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CreateTasktaskName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="OUTPUT_1" name="OUTPUT_1">
-      <column key="false" length="4048" name="taskId" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="taskName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="jl_ci_005_deployESBTask" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jl_ci_005_deployESBTask_1"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TEXT" name="LABEL" value="jl_ci_005_deployESBTask"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <metadata connector="FLOW" name="jl_ci_005_deployESBTask_1">
       <column comment="" key="false" length="-1" name="CreateTaskactionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="authPass" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="authUser" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -1970,54 +1724,19 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_4"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_5"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="UpdateESBTasks-DeployESBTasks           or        CreateESBTasks-CreateESBTask-DeployESBTask"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="jl_ci_007_undeployESBTask_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="jl_ci_002_updateESBTask_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="jl_ci_005_deployESBTask_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="jl_ci_001_createESBTask_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="jl_ci_003_getESBTaskID_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="jl_ci_005_deployESBTask_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b116db19-d4d3-45ec-abf2-bb6e3edd9dd2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1zVtTMuizq/DZIaw/ZGbi4uSDxrShYXznuuTmoC20u8QVgRek4RPIEfO0VJdvr90Q+C8qyTRIwZG
-ZxZohuO6Qw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ee2d0c1a-3fa8-4899-82e5-b37ff92ff083"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bywvtTxYMk/7APE/bj/w34spPXS7YKoEV5blohNMAwO8seF7J1f5RIma0HF56wFVw8ssq2RQIt8c
-w9+MvCcSTQ==</DigestValue></Reference></SignedInfo><SignatureValue>XigA2y7HqcVi9qiLjDCBgqaDjXX/IjyiDjE1YUJC11wUeA9NBbSv1Cxb1NXnTvuU2dCEoLpAiELs
-JwJHqThBs9htaTQ+urvpk7WZSoNU0HvMj2oFG7IK7Re2r8QKR/b8llTfq5m0tUk4wPkwVZKHNIo0
-sSZOxp56kJJeDF7LBgfcYRLWP/RXiXuFTTzGAq3jLaS5TbJIpepRtphz+cxcqLGhXeXrUis63KvW
-DrUhan0FXELioYfGQgEEprKxFkt+Ai5RmHUBGlQS0seh5s8QXqqvJuiBxSLs6v3YAS3N/Cb6OQhR
-5OAx31B1Okzo1RXk5CSo9rx19y9BAB4q6S1nUA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eb5902d5-789f-482a-9cd3-63c11724f11c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Jg25rNyA3eyLXp+FlFW+vO0Y0A7d1+0PgCDvhPm1yiYPGRTb7dCQbn5DTMV7wyYZd2olIXqyHCco
+fCJVum9KqQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3a087676-5fac-4394-bac8-0fc6b1f4857a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XJqNkgyWPpOl3CluiieVoePtfDLX4TUr4zOEF9yvdt4WAxZ/lWD9NT+UhDThCYMjgMAKe/gbJJNa
+59w01lAVPg==</DigestValue></Reference></SignedInfo><SignatureValue>ZZCpWT/4U2E4OxLiGfmw64+HG6yKX/chQ4VCvjDtQt6aOs0w/DW4N5qxh6dlM0Xdrz4ZmNzB0fu2
+GTFnpOXQtr/k7n4HyNvvtpHi3LeUcZH9JvsuKN5DRA9vSEnmrzTFEEi/SZ2VI0jX8IoV+brsQO9P
+qoab+TQ8N2RjnFq7Eewn93dBHmtfegtxYaC9u354DjmVG/uOdj8U7lIlRFXhWRfZ7pWdhgvOjMzd
+TrUKyPGahPQhW4/cstHpCMBzNTK3oiYx9Yf/6XEagokVgoQpSeupPFBfDBWG5jUU4m9Kek0KR/LC
+eVViKxa3XQQkU6Ov+2aVWGFSx0ZAK/4OOrWLVg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2041,4 +1760,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ee2d0c1a-3fa8-4899-82e5-b37ff92ff083" Target="#_b116db19-d4d3-45ec-abf2-bb6e3edd9dd2"><Timestamp>2018-12-08 21:50:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3a087676-5fac-4394-bac8-0fc6b1f4857a" Target="#_eb5902d5-789f-482a-9cd3-63c11724f11c"><Timestamp>2018-12-08 21:54:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

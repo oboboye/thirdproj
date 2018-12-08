@@ -218,10 +218,6 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="_WXD5GfszEeigW7T8B8x_HA">
       <baseItem xmi:id="_WXD5GvszEeigW7T8B8x_HA" id="_iQFlkJdTEeifzv_z6bUDBg" version="0.1" type="job"/>
-      <relatedItems xmi:id="_WXD5G_szEeigW7T8B8x_HA" id="_pVPuUMhmEeenNZ0R3xTjAA" version="Latest" type="context"/>
-      <relatedItems xmi:id="_WXD5HPszEeigW7T8B8x_HA" id="_OBSmYMOvEeevAohFEeVf-g" version="Latest" type="context"/>
-      <relatedItems xmi:id="_WXD5HfszEeigW7T8B8x_HA" id="_igy10MXaEeansOym92b9eg" version="Latest" type="context"/>
-      <relatedItems xmi:id="_WXD5HvszEeigW7T8B8x_HA" id="_F2Y5IMXVEeansOym92b9eg" version="Latest" type="context"/>
       <relatedItems xmi:id="_WXD5H_szEeigW7T8B8x_HA" id="_5j5L0JdqEeifzv_z6bUDBg" version="Latest" type="joblet"/>
       <relatedItems xmi:id="_WXD5IPszEeigW7T8B8x_HA" id="_CXUwUJdrEeifzv_z6bUDBg" version="Latest" type="joblet"/>
       <relatedItems xmi:id="_WXD5IfszEeigW7T8B8x_HA" id="_E0L0UJdrEeifzv_z6bUDBg" version="Latest" type="joblet"/>
@@ -247,7 +243,6 @@
       <relatedItems xmi:id="_WXD5NfszEeigW7T8B8x_HA" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_WXD5NvszEeigW7T8B8x_HA" id="DataQualityDependencies" version="Latest" type="routine"/>
       <relatedItems xmi:id="_WXD5N_szEeigW7T8B8x_HA" id="TalendStringUtil" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_WXD5OPszEeigW7T8B8x_HA" id="_ZcPisMSfEeevAohFEeVf-g - metadata" version="Latest" type="schema"/>
       <relatedItems xmi:id="_WXD5OfszEeigW7T8B8x_HA" id="_U8mrYJdVEeifzv_z6bUDBg - metadata" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_WXD5OvszEeigW7T8B8x_HA">
