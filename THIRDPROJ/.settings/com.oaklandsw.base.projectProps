@@ -1,3 +1,4 @@
+Maps/Jobs/MDM_395_Migrate_Site_Assessment_Activity/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/Jobs/MDM_395_Migrate_Site_Assessment_Activity/tHMap_1_input.xml
 Maps/Jobs/Organisation_Build_Shipment_XML/Native_Organisation_Mapping.xml,com.oaklandsw.base,references.0,Structures/NativeOrganization/Elements/Organization.xml
 Maps/Jobs/Organisation_Build_Shipment_XML/Native_Organisation_Mapping.xml,com.oaklandsw.base,references.1,Structures/Jobs/Organisation_Build_Shipment_XML/OrganisationData_input.xml
 Maps/Jobs/Tariff_Seafreight_Rate_Build_XML/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/NativeRate/Elements/Rate.xml
