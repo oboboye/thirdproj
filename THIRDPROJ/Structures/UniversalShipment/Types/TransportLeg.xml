@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='150' id='1' V150='13' creationTimestamp='0x157b042e3b2' V1='4' name='TransportLeg' incarnation='36'>
+  <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='TransportLeg'>
+    <structNode t='150' idref='1'/>
+    <child t='167' id='3' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e3c2' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/UNLOCO.xml' namespaceIndex='1' V281='13' V1='4' name='PortOfDischarge'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='4' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/UNLOCO.xml' namespaceIndex='1' V281='13' V1='4' name='PortOfDischarge'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='5' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='UNLOCO'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='6' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e3c2' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/UNLOCO.xml' namespaceIndex='1' V281='13' V1='4' name='PortOfLoading'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='7' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/UNLOCO.xml' namespaceIndex='1' V281='13' V1='4' name='PortOfLoading'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='8' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='UNLOCO'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='9' V167='21' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='10' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='LegOrder'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='10' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='ActualArrival'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='11' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='ActualArrival'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='12' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='13' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='ActualArrivalInPortOfLoading'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='14' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='ActualArrivalInPortOfLoading'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='15' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='16' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='ActualDeparture'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='17' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='ActualDeparture'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='18' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='19' V167='21' inheritsFromIncarnation='13' inheritsFromTimestamp='0x157b042e393' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='ArrivalAt' checksumValid='true' checksum='AR2rAlJJKIB84BPqK4gAKampJ6U='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='20' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='ArrivalAt'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='21' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='OrganizationAddress'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='22' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='ArrivalBerth'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='23' V167='21' inheritsFromIncarnation='13' inheritsFromTimestamp='0x157b042e393' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='ArrivalCTO' checksumValid='true' checksum='EJZEJLOCblTK7C+F07Mehm6tLSI='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='24' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='ArrivalCTO'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='25' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='OrganizationAddress'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='26' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='ArrivalReference'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='27' V167='21' inheritsFromIncarnation='13' inheritsFromTimestamp='0x157b042e393' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='Carrier' checksumValid='true' checksum='wcRbCLNMetfvKbiubGy8z1Fu6MA='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='28' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='Carrier'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='29' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='OrganizationAddress'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='30' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='CarrierBookingReference'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='31' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e3a3' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/ServiceLevel.xml' namespaceIndex='1' V281='13' V1='4' name='CarrierServiceLevel'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='32' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/ServiceLevel.xml' namespaceIndex='1' V281='13' V1='4' name='CarrierServiceLevel'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='33' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='ServiceLevel'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='34' V167='21' inheritsFromIncarnation='13' inheritsFromTimestamp='0x157b042e393' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='Creditor' checksumValid='true' checksum='dr4AD2DF9VwcOfqqqqxgxSZk/N4='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='35' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='Creditor'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='36' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='OrganizationAddress'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='37' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='DepartureBerth'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='38' V167='21' inheritsFromIncarnation='13' inheritsFromTimestamp='0x157b042e393' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='DepartureCTO' checksumValid='true' checksum='kSQU0x2NGi/B9KrsZ2AHNZZpbcI='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='39' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='DepartureCTO'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='40' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='OrganizationAddress'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='41' V167='21' inheritsFromIncarnation='13' inheritsFromTimestamp='0x157b042e393' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='DepartureFrom' checksumValid='true' checksum='B2YimzGubMqmGmu+mFZrV+sbyVU='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='42' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/OrganizationAddress.xml' namespaceIndex='1' V281='13' V1='4' name='DepartureFrom'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='43' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='OrganizationAddress'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='44' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='DepartureReference'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='45' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='DocumentCutOff'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='46' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='DocumentCutOff'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='47' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='48' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='EstimatedArrival'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='49' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='EstimatedArrival'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='50' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='51' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='EstimatedArrivalInPortOfLoading'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='52' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='EstimatedArrivalInPortOfLoading'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='53' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='54' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='EstimatedDeparture'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='55' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='EstimatedDeparture'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='56' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='57' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLAvailability'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='58' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLAvailability'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='59' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='60' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLCutOff'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='61' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLCutOff'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='62' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='63' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLReceivalCommences'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='64' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLReceivalCommences'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='65' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='66' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLStorage'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='67' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='FCLStorage'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='68' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='69' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='HazzardCutOffDate'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='70' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='HazzardCutOffDate'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='71' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='72' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='HazzardReceivalCommences'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='73' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='HazzardReceivalCommences'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='74' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='75' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='IsCargoOnly'>
+      <structNode t='150' idref='1'/>
+      <child t='167' id='76' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='true'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='77' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='false'>
+        <structNode t='150' idref='1'/>
+      </child>
+    </child>
+    <child t='167' id='78' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLAvailability'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='79' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLAvailability'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='80' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='81' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLCutOff'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='82' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLCutOff'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='83' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='84' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLReceivalCommences'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='85' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLReceivalCommences'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='86' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='87' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLStorageDate'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='88' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='LCLStorageDate'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='89' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='90' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='2147483647' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='LegNotes'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='91' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='LegType' checksumValid='true' checksum='szQR3f/KN4Sc3iWYeDmKajdzVcY='>
+      <structNode t='150' idref='1'/>
+      <child t='167' id='92' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Flight1'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='93' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Flight2'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='94' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Flight3'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='95' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Main'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='96' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PreCarriage'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='97' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='OnForwarding'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='98' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Other'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='99' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='LocalTransport'>
+        <structNode t='150' idref='1'/>
+      </child>
+    </child>
+    <child t='167' id='100' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='12' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='Link'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='101' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='TransportMode'>
+      <structNode t='150' idref='1'/>
+      <child t='167' id='102' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Air'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='103' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Sea'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='104' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Road'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='105' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Rail'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='106' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='5' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Storage'>
+        <structNode t='150' idref='1'/>
+      </child>
+    </child>
+    <child t='167' id='107' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='7' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='VesselLloydsIMO'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='108' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='35' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='VesselName'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='109' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='VGMCutOff'>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='110' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/emptiable_dateTime.xml' namespaceIndex='1' V281='13' V1='4' name='VGMCutOff'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='111' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='emptiable_dateTime'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+    <child t='167' id='112' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='VoyageFlightNo'>
+      <structNode t='150' idref='1'/>
+    </child>
+    <child t='167' id='113' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='CustomizedFieldCollection'>
+      <structNode t='150' idref='1'/>
+      <child t='167' id='114' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x157b042e374' inheritsInThisStruct='true' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='3' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/CustomizedField.xml' namespaceIndex='1' V281='13' V1='4' name='CustomizedField'>
+        <structNode t='150' idref='1'/>
+        <savedDerivedCopy t='167' id='115' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/UniversalShipment/Types/CustomizedField.xml' namespaceIndex='1' V281='13' V1='4' name='CustomizedField'>
+        </savedDerivedCopy>
+        <savedOrigCopyAtInheritsFrom t='167' id='116' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='CustomizedField'>
+        </savedOrigCopyAtInheritsFrom>
+      </child>
+    </child>
+  </rootElem>
+  <defaultRep t='172' id='117' V172='6' autoFixNamespaceMismatch='true' V170='10' V692='1' unnamedElemsNamespace='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='XML'>
+    <namespaceContainers t='220' ref='Namespace Containers/UniversalShipment.xml'/>
+  </defaultRep>
+  <namespaceList t='161' id='118' V161='1' namespaceUri='___osdtDummy___' V1='4'>
+  </namespaceList>
+  <namespaceList t='161' id='119' V161='1' namespaceUri='http://www.cargowise.com/Schemas/Universal/2011/11' namespacePrefix='default' V1='4'>
+  </namespaceList>
+  <child t='162' id='120' V1='4' name='Representations'>
+    <child t='172' idref='117'/>
+  </child>
+  <child t='165' id='121' V1='4' name='Document Bindings'>
+    <child t='166' id='122' V166='5' docType='1' V1='4' name='/TransportLeg'>
+      <elemNode t='167' idref='2'/>
+    </child>
+  </child>
+</root>

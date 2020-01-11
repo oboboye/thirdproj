@@ -1,0 +1,412 @@
+package routines;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.concurrent.ConcurrentHashMap;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class LookupUtils {
+
+	private static ConcurrentHashMap<String, DataValue> dataStore;
+	private static ArrayList<String> rowErrors = new ArrayList<String>();
+	
+	
+	/**
+     * Initialise the dataStore static variable
+     * 
+     */
+	public static void initialiseDataStore(){
+		dataStore = new ConcurrentHashMap<String, DataValue>();
+		
+	}
+	/**
+     * Reset the rowErrors variable
+     * 
+     */	
+	private static void resetRow(){
+		rowErrors = new ArrayList<String>();
+	}
+	
+	/**
+     * Add an error to the rowErrors variable
+     * 
+     * @param error The error value to add
+     * 
+     *
+     * {Category} LookupUtils
+     *
+     * {param} string("Missing lookup value") error : The error value to add
+     *
+     *
+     * {example} addErrorToRow("Missing lookup value") #
+     */
+	private static void addErrorToRow(String error){
+		rowErrors.add(error);
+	}
+	
+	/**
+     * Return the error messages for the current row
+     * 
+     */		
+	public static String getErrorMessage(){
+		String error = "";
+		
+		if(rowErrors.size()>0){
+			Iterator<String> it = rowErrors.iterator();
+			
+			while(it.hasNext()){
+				error = error.compareToIgnoreCase("")==0 ? it.next() : error+";"+it.next();
+			}
+			
+		}
+		
+		resetRow();
+		
+		return error;
+	}
+	
+	
+	/**
+     * Add data to the in-memory lookup dataset
+     *
+     * @param key The key to the dataset (usually column name)
+     * @param inputValue the value being used for the lookup.
+     * @param outputValue the value to be retrieved.
+     * @param trimChars the number of chars to reduce the data to before carrying out the lookup.
+     * @return 
+     *
+     *
+     * {talendTypes}
+     *
+     * {Category} LookupUtils
+     *
+     * {param} string("My Column") key : The key to the dataset (usually column name)
+     * {param} string("H") inputValue : The value being used for the lookup 
+     * {param} string("Hello") outputValue : The value to be retrieved.
+     * {param} integer(2) trimChars : The number of chars to reduce the data to before carrying out the lookup.  
+     *
+     * {example} loadDataStore("My Column", "H", "HELLO", 1) #
+     */
+    public static void loadDataStore(String key, String inputValue, String outputValue, Integer trimChars) {
+        
+    	DataValue tmpDataValue = null;
+    	
+    	if(dataStore.containsKey(key)){
+    		tmpDataValue = dataStore.remove(key);
+        }else{
+        	tmpDataValue = new LookupUtils().new DataValue();//(key);
+        }
+    	
+    	if(inputValue!=null){
+    		inputValue = inputValue.trim();
+    	}
+    	
+    	LookupUtils.CaseSwitchingKey csk = new LookupUtils().new CaseSwitchingKey(inputValue);
+    	
+    	tmpDataValue.putData(csk, outputValue);
+    	tmpDataValue.setTrimChars(trimChars);
+    	
+    	dataStore.put(key, tmpDataValue);
+    }
+    
+    
+	/**
+     * Retrieve the lookup value - Case insensitive version
+     *
+     * @param key The key to the dataset (usually column name)
+     * @param inputValue the value being used for the lookup.
+     * @return the looked-up value
+     *
+     * {talendTypes} 
+     *
+     * {Category} LookupUtils
+     *
+     * {param} string("My Column") key : The key to the dataset (usually column name)
+     * {param} string("H") inputValue : The value being used for the lookup 
+     *
+     * {example} getValue("My Column", "H") #
+     */
+    public static String getValue(String key, String inputValue){
+
+    	return getValue(key, inputValue, false);
+    }
+
+
+	/**
+     * Retrieve the lookup value - Case sensitive version
+     *
+     * @param key The key to the dataset (usually column name)
+     * @param inputValue the value being used for the lookup.
+     * @return the looked-up value
+     *
+     * {talendTypes} 
+     *
+     * {Category} LookupUtils
+     *
+     * {param} string("My Column") key : The key to the dataset (usually column name)
+     * {param} string("H") inputValue : The value being used for the lookup 
+     *
+     * {example} getValueCaseSensitive("My Column", "H") #
+     */    
+    public static String getValueCaseSensitive(String key, String inputValue){
+    	
+    	return getValue(key, inputValue, true);
+    }
+    
+    
+	/**
+     * Retrieve the lookup value - Case sensitive or case insensitive
+     *
+     * @param key The key to the dataset (usually column name)
+     * @param inputValue the value being used for the lookup.
+     * @param caseSensitive a boolean indicating whether a case sensitive search is required.
+     * @return the looked-up value
+     *
+     * {talendTypes} 
+     *
+     * {Category} LookupUtils
+     *
+     * {param} string("My Column") key : The key to the dataset (usually column name)
+     * {param} string("H") inputValue : The value being used for the lookup 
+     * {param} boolean(true) caseSensitive : A boolean indicating whether a case sensitive search is required. 
+     *
+     * {example} getValue("My Column", "H", true) #
+     */    
+    public static String getValue(String key, String inputValue, boolean caseSensitive){
+    	
+    	if(inputValue!=null){
+    		inputValue = inputValue.trim();
+    	}
+    	
+    	String returnVal = getValueWorker(key, inputValue,caseSensitive);
+    	
+    	if(returnVal!=null&&returnVal.equals("INPUT VALUE MISSING")){
+    		returnVal = getValueWorker(key, "*",caseSensitive);
+    	}
+    	
+    	if(returnVal!=null&&returnVal.equals("INPUT VALUE MISSING")){
+    		addErrorToRow(key);
+    		returnVal = inputValue;
+    	}
+    	
+    	//Use inputValue with no error if * is returned
+    	if(returnVal!=null && returnVal.equals("*")){
+    		returnVal = inputValue;
+    	}
+    	
+    	return returnVal;
+    }
+ 
+        
+    
+	/**
+     * Retrieve the lookup value without search order functionality. Should not be used without wrapper
+     * method, hence its private status
+     *
+     * @param key The key to the dataset (usually column name)
+     * @param inputValue the value being used for the lookup.
+     * @param caseSensitive a boolean indicating whether a case sensitive search is required.
+     * @return the looked-up value
+     *
+     * {talendTypes} 
+     *
+     * {Category} LookupUtils
+     *
+     * {param} string("My Column") key : The key to the dataset (usually column name)
+     * {param} string("H") inputValue : The value being used for the lookup 
+     * {param} boolean(true) caseSensitive : A boolean indicating whether a case sensitive search is required. 
+     *
+     * {example} getValueWorker("My Column", "H", true) #
+     */       
+    private static String getValueWorker(String key, String inputValue, boolean caseSensitive){
+    	String returnVal = inputValue;
+    	
+    	DataValue tmpDataValue = null;
+   	
+    	
+    	if(dataStore.containsKey(key)){
+    		
+    		tmpDataValue = dataStore.get(key);
+    		
+    		 //If inputValue is to be trimmed to find a match
+    		if(tmpDataValue.getTrimChars()!=null){
+    			if(inputValue!=null&&tmpDataValue.getTrimChars().intValue()<inputValue.length()){
+    					inputValue = inputValue.substring(0, tmpDataValue.getTrimChars().intValue());
+    			}
+    		}
+    		
+    		LookupUtils.CaseSwitchingKey csk = new LookupUtils().new CaseSwitchingKey(inputValue,caseSensitive);
+    		
+    		if(tmpDataValue.contains(csk)){
+    			returnVal = tmpDataValue.getData(csk);    			
+
+    		}else{
+    			returnVal = "INPUT VALUE MISSING";
+    		}
+    	}
+    	
+    	return returnVal;
+    }
+    
+    
+    
+    
+    /**
+     * A class to hold the lookup data in memory and permit the different options for looking
+     * the data up.
+     * 
+     * This is not intended to be used without the methods above. It will not be used in Talend job directly
+     * 
+     * 
+     * @author hallr
+     *
+     */
+    class DataValue{
+    	private HashMap<CaseSwitchingKey,String> valueMap = new HashMap<CaseSwitchingKey,String>();
+    	private Integer trimChars;
+    	
+    	
+    	public DataValue(){ 
+    		
+    	}
+    	
+    	/**
+    	 * Add data into the class' HashMap
+    	 * 
+    	 * @param inputValue
+    	 * @param outputValue
+    	 */
+    	public void putData(CaseSwitchingKey inputValue, String outputValue){
+    		valueMap.put(inputValue, outputValue);
+    	}
+    	
+    	/**
+    	 * Retrieve data from the class' HashMap using a ClassSwitchingKey object as the key. This
+    	 * allows case sensitive or case insensitive lookups to be used
+    	 * 
+    	 * @param inputValue
+    	 * @return
+    	 */
+    	public String getData(CaseSwitchingKey inputValue){
+    		return valueMap.get(inputValue);
+    	}
+   	
+    	/**
+    	 * Check to see of the class' HashMap contains the inputValue using a ClassSwitchingKey object as the key. This
+    	 * allows case sensitive or case insensitive lookups to be used
+    	 * 
+    	 * @param inputValue
+    	 * @return
+    	 */
+    	public boolean contains(CaseSwitchingKey inputValue){
+    		return valueMap.containsKey(inputValue);
+    	}
+    	
+    	
+    	/**
+    	 * Sets the trimChars value indicating that input values may require trimming before the 
+    	 * lookup can take place
+    	 * 
+    	 * @param trimChars
+    	 */
+    	public void setTrimChars(Integer trimChars){
+    		if(trimChars!=null){
+    			if(this.trimChars!=null){
+    				if(trimChars.intValue()<this.trimChars.intValue()){
+    					this.trimChars = trimChars;
+    				}
+    			}else{
+    				this.trimChars = trimChars;
+    			}
+    		}
+    		
+    	}
+    	
+    	/**
+    	 * Returns the trimChars value
+    	 * 
+    	 * @return
+    	 */
+    	public Integer getTrimChars(){
+    		return this.trimChars;
+    	}
+    	
+    }
+    
+    
+    
+    /**
+     * A class to permit case insensitive and case sensitive lookups. It handles only String values and works specifically with 
+     * hashed lookups like in HashMaps
+     * 
+     * @author hallr
+     *
+     */
+    public class CaseSwitchingKey
+    	{
+    		private String data;
+    		private boolean caseSensitive;
+    		
+    		public CaseSwitchingKey(String data){
+    			this.data = data;
+    			this.caseSensitive = false;
+    		}
+    		
+    		public CaseSwitchingKey(String data, boolean sensitive){
+    			this.data = data;
+    			this.caseSensitive = sensitive;
+    		}
+    		
+			
+			@Override
+			public int hashCode() {
+    			//All hasCodes will be derived from an uppercase version of the
+    			//String. This will impact performance slightly, but shouldn't be noticed
+    			return data!=null ? data.toUpperCase().hashCode() : 0;
+			}
+
+			@Override
+			public boolean equals(Object obj) {
+    			//Handle null comparisons
+				if(((CaseSwitchingKey)obj).getData()==null||data==null){
+					if(data==null&&((CaseSwitchingKey)obj).getData()==null){
+						return true;
+					}else{
+						return false;
+					}
+				}
+				
+    			//If the lookup is case sensitive
+    			if(this.caseSensitive){
+    				return ((CaseSwitchingKey)obj).getData().equals(data);
+    			}else{
+    				return ((CaseSwitchingKey)obj).getData().equalsIgnoreCase(data);
+    			}
+			}
+
+    		public String getData() {
+				return data; 
+			}
+
+    	}
+    
+    
+}

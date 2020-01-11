@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='220' id='1' V220='3' defaultNamespaceUri='http://www.cargowise.com/Schemas/Universal/2011/11' V1='4' name='UniversalShipment' incarnation='30'>
+  <namespaceRoot t='221' id='2' V222='3' V1='4'>
+    <namespaceContainer t='220' idref='1'/>
+    <child t='222' id='5' V222='3' namespaceUri='http://www.cargowise.com/Schemas/Universal/2011/11' V1='4' name='default'>
+      <namespaceContainer t='220' idref='1'/>
+    </child>
+  </namespaceRoot>
+</root>

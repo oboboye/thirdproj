@@ -1,0 +1,507 @@
+package routines;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.apache.commons.lang3.StringEscapeUtils;
+
+
+
+
+
+
+
+
+
+
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.io.DOMWriter;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+//import org.w3c.dom.xpath.XPathExpression;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.StringWriter;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class AllportCargoUtils {
+
+    public static String getFilePrefix(String filename, long filenumber, int numchars, String separator, String leftLimitChar, String rightLimitChar){
+    	String prefix = ""+filenumber;
+    	
+    	for(int i = prefix.length(); i<=numchars; i++){
+    		prefix = "0"+prefix;
+    	}
+    	
+    	prefix = leftLimitChar+prefix+rightLimitChar;
+    	
+    	return prefix+separator+filename;
+    }
+    
+    public static String correctFilePathForJSONContext(String path){
+    	return path.replace("\\", "/");
+    }
+
+    public static String reverseFilePathForJSONContext(String path){
+    	if (path==null){ 
+    		return path;
+    	}else{
+    		return path.replace("/", "\\");
+    	}
+    }
+    
+    public static boolean isNumeric(String data){
+    	boolean returnVal = true;
+    	
+    	try{
+    		Integer.parseInt(data);
+    	}catch(Exception ex){
+    		returnVal = false;
+       	}
+    	return returnVal;
+    }
+
+    public static boolean isDoubleNumeric(String data){
+    	boolean returnVal = true;
+    	
+    	try{
+    		Double.parseDouble(data);
+    	}catch(Exception ex){
+    		returnVal = false;
+       	}
+    	return returnVal;
+    }
+
+    public static String safeTruncateString(String data, int length){
+    	String returnVal = data;
+    	
+    	if(data!=null){
+    		if(data.length()>length){
+    			returnVal = data.substring(0, length);
+    		}
+    	}
+    	
+    	return returnVal;
+    }
+
+    
+    public static String removeXMLHeader(String xml){
+    	if(xml!=null){
+    		xml = xml.replaceAll("\\<\\?xml(.+?)\\?\\>", "").trim();
+    	}
+    	
+    	return xml;
+    }
+
+    public static String removeXMLNamespaces(String xml){
+    	if(xml!=null){
+    		xml = getStringFromDocument(cleanNameSpace(loadXMLFromString(xml)));
+    	}
+    	
+    	return xml;
+    	
+    }
+    
+    public static Document loadXMLFromString(String xml) 
+    {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        DocumentBuilder builder;
+        Document doc = null;
+		try {
+			builder = factory.newDocumentBuilder();
+			doc = builder.parse(new ByteArrayInputStream(xml.getBytes()));
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+        return doc;
+    }
+    
+    private static void removeNameSpace(Node node, String nameSpaceURI) {
+
+        if (node.getNodeType() == Node.ELEMENT_NODE) {
+            Document ownerDoc = node.getOwnerDocument();
+            NamedNodeMap map = node.getAttributes();
+            
+            Node n;
+            
+           while(!(0==map.getLength())){
+            // for(int i = 0; i<map.getLength(); i++) {
+                n = map.item(0);
+                //System.out.println("Name node" + n.getNodeName()+" | "+n.getNamespaceURI()+" | "+n.getNodeValue());
+                //if(n.getNodeName().compareToIgnoreCase("nodexmlns")==0){
+                map.removeNamedItemNS(n.getNamespaceURI(), n.getLocalName());
+                //}
+                
+            }
+           
+            
+            ownerDoc.renameNode(node, nameSpaceURI, node.getLocalName());
+            
+        }
+        NodeList list = node.getChildNodes();
+        for (int i = 0; i < list.getLength(); i++) {
+            removeNameSpace(list.item(i), nameSpaceURI);
+        }
+    }
+    
+    public static Document cleanNameSpace(Document doc) {
+
+        NodeList list = doc.getChildNodes();
+        for (int i = 0; i < list.getLength(); i++) {
+            removeNameSpace(list.item(i), "");
+        }
+
+        return doc;
+    }
+    
+    public static String getStringFromDocument(Document doc)
+    {
+        try
+        {
+           DOMSource domSource = new DOMSource(doc);
+           StringWriter writer = new StringWriter();
+           StreamResult result = new StreamResult(writer);
+           TransformerFactory tf = TransformerFactory.newInstance();
+           Transformer transformer = tf.newTransformer();
+           transformer.transform(domSource, result);
+           return writer.toString();
+        }
+        catch(TransformerException ex)
+        {
+           ex.printStackTrace();
+           return null;
+        }
+    } 
+    
+    
+    public static String padString(String data, int length, String padvalue, boolean frontpad ){
+    	String returnVal = data;
+    	
+    	if(data!=null&& padvalue!=null && padvalue.length()>0){
+    		while(data.length()<length){
+    			if(frontpad){
+    				data = padvalue+data;
+    			}else{
+    				data = data+padvalue;
+    			}
+    		}
+    		
+    		returnVal = data;
+    	}
+    	
+    	return returnVal;
+    }
+    
+    /*
+     * Return the first characters from a postcode only
+     */
+    public static String getPostCodePrefix(String data){
+    	String returnVal = data;
+    	
+    	if(data!=null){
+    		
+    		Pattern p = Pattern.compile("\\p{Digit}");
+    		Matcher m = p.matcher(data);
+    		if (m.find()) {
+    		    returnVal = data.substring(0,m.start());
+    		}
+    		
+    	}
+    	//System.out.println("POSTCOE = "+ returnVal);
+    	return returnVal;
+    }
+
+    
+    /*
+     * Return regex matches from String
+     */
+    public static String[] getRegexMatches(String data, String regex){
+    	String[] returnVal = {};
+    	java.util.ArrayList<String> matches = new java.util.ArrayList<String>();
+    	
+    	
+    	if(data!=null && regex!=null){
+    		
+    		Pattern p = Pattern.compile(regex);
+    		Matcher m = p.matcher(data);
+    		
+    		while(m.find()){
+    			matches.add(m.group());
+    		}
+    		returnVal = Arrays.copyOf(matches.toArray(),matches.toArray().length,String[].class);
+    	}
+    	
+    	return returnVal;
+    }
+    
+    
+    /*
+     * Return 
+     */
+    public static String replaceExactMatch(String data, String find, String replace){
+    	
+    	String returnVal = data;
+    	
+    	if(find!=null && find.compareToIgnoreCase("")!=0 && 
+    			replace!=null && replace.compareToIgnoreCase("")!=0 && 
+    			data.indexOf(find)>-1){
+    		
+    		String firstHalf = data.substring(0,data.indexOf(find));
+    		String secondHalf = data.substring(data.indexOf(find)+find.length());
+    		String charAfterFind = "";
+    		
+    		if(secondHalf.length()>0){
+    			charAfterFind = secondHalf.substring(0, 1);
+    			if(charAfterFind.compareToIgnoreCase(",")==0 || charAfterFind.compareToIgnoreCase(" ")==0){
+    				returnVal = firstHalf+replace+secondHalf;
+    			}else{
+    				returnVal = firstHalf+find+secondHalf;
+    			}
+    		}else{
+    			
+    			returnVal = firstHalf+replace+secondHalf;
+    		}
+    		
+    	
+    	//	System.out.println(data);
+    	//	System.out.println(returnVal);
+    	//	System.out.println(firstHalf);
+    	//	System.out.println(secondHalf);
+    	}
+    	 return returnVal;
+    	
+    }
+    
+    /*
+     * Return 
+     */
+    public static boolean findValueInReplaceValue(String find, String replace){
+    	
+    	if(find!=null && replace!=null && replace.toUpperCase().indexOf(find.toUpperCase())>-1){
+    		return true;
+    	}else{
+    		return false;
+    	}
+    	
+    }
+    
+    
+    /*
+     * Return 
+     */
+    public static String[] splitStringIntoSizeChunksToNearestSeparator(String data, String separator, int size, int numberOfArrayDimensions){
+    	String[] chunks = data.split(separator);
+    	
+    	String chunk = "";
+    	
+    	String[] returnVal = new String[numberOfArrayDimensions];
+    	int noadCount = 0;
+    	
+    	for(int i = 0; i<chunks.length && noadCount<numberOfArrayDimensions; i++){
+    		
+    		if((chunk+","+chunks[i]).length()<size){
+    		//If the chunk and text to add is less than the size, add and continue
+    			if(i==0||chunk.compareToIgnoreCase("")==0){
+    				chunk = chunks[i];
+    			}else{
+    				chunk = chunk+separator+chunks[i];
+    			}
+    			//System.out.println("Option1");
+    		}else if(chunk.length()>0 && chunks[i].length()<size){
+    		//If the chunk is greater than 0 in size and text to add is less than the size, but
+    		//together they are greater than the total chunk size, save the chunk, reset and go back to
+    		//this chunk iteration.
+    			returnVal[noadCount] = chunk;
+    			i--;
+    			noadCount++;
+    			chunk="";
+    			
+    			//System.out.println("Option2");
+    		}else if(chunk.length()==0 && chunks[i].length()==size){
+    		//If the chunk length is 0 and the text to add is exactly the max chunk size. Save the 
+    		//text to add as the whole chunk
+    			
+    			returnVal[noadCount] = chunks[i];
+    			noadCount++;
+    			chunk="";
+    			
+    			//System.out.println("Option3");
+    		}//Everything else should fail to be added because the text to add is too big on its own.
+    		
+    		if(noadCount!=numberOfArrayDimensions){
+    			returnVal[noadCount] = chunk;
+    		}
+    	}
+    	
+    	return returnVal;
+    	
+    }
+   
+    
+    public static String convertNullStringToEmptyString(String data){
+    	if(data!=null){
+    		return data;
+    	}else{
+    		return "";
+    	}
+    }
+    
+    
+    public static String replaceIllegalFileCharsKeepForwardSlashForFolders(String name){
+    	if(name!=null){
+    		name = name.replaceAll("[^a-zA-Z0-9_\\/.-]", "_");
+    	}
+    	
+    	return name;
+    	
+    }
+    
+    
+    
+    
+    /*
+     * 
+     */
+    
+    public static String replaceXMLElement(String baseXml, String xmlFragment, String xmlLocation) throws SAXException, IOException, ParserConfigurationException,
+    XPathExpressionException, TransformerException, DocumentException {
+    	//System.out.println("base======"+baseXml);
+    	//System.out.println("fragment======"+xmlFragment);
+    	
+    	   
+    	//Document w3baseXml = new DOMWriter().write(((org.dom4j.Document)baseXml));
+    	//Document w3xmlFragment = new DOMWriter().write(((org.dom4j.Document)xmlFragment));
+    	
+    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    factory.setNamespaceAware(false); 
+    
+    DocumentBuilder builder = factory.newDocumentBuilder();
+    
+    // step 1.
+    Document doc = builder.parse(new ByteArrayInputStream((baseXml).getBytes()));
+
+    // step 2
+    Document fragmentDoc = builder.parse(new ByteArrayInputStream(xmlFragment.getBytes()));
+
+    // step 3
+    Node injectedNode = doc.adoptNode(fragmentDoc.getFirstChild());
+    //Node injectedNode = doc.adoptNode(fragmentDoc.getFirstChild());
+
+    // step 4
+    XPath xPath = XPathFactory.newInstance().newXPath();
+    XPathExpression expr = xPath.compile(xmlLocation);
+   // System.out.println();
+    Element nodeFound = (Element) expr.evaluate(doc, XPathConstants.NODE);
+
+    // step 5
+    Node parentNode = nodeFound.getParentNode();
+    parentNode.replaceChild(injectedNode,nodeFound);
+   // parentNode.appendChild(injectedNode);
+
+    //return w3baseXml;
+    DOMSource domSource = new DOMSource(doc);
+    Transformer transformer = TransformerFactory.newInstance().newTransformer();
+    StreamResult result = new StreamResult(new StringWriter());
+    transformer.transform(domSource, result);
+    //System.out.println(result.getWriter().toString());
+
+    return result.getWriter().toString();
+
+    }
+    
+    
+
+	/**
+     * Replace multibyte characters from a String. Used to get replace Chinese characters, for example
+     *
+     * @param data The data with the characters to replace 
+     * @param replacementValue The replacement value
+     * @return 
+     *
+     *
+     * {talendTypes}
+     *
+     * {Category} AllportCargoUtils
+     *
+     * {param} string("A string with multibyte characters") data : The data with the characters to replace
+     * {param} string("TEST") replacementValue : The replacement value 
+     *
+     * {example} replaceMultibyteCharacters("A string with multibyte characters", "TEST") #
+     */
+    public static String replaceMultibyteCharacters(String data, String replacementValue){
+    	
+    	replacementValue = replacementValue!=null ? replacementValue : "";
+    	
+    	if(data!=null){
+    		
+    		data = data.replaceAll("\\P{Print}", replacementValue);
+    	}
+    	
+    	return data;
+    	
+    }
+    
+    
+    
+}
+    
+

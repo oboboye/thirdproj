@@ -1,0 +1,152 @@
+package routines;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+import org.jasypt.properties.EncryptableProperties;
+
+/*
+ * This routine is used to point the Implicit Context Load to the correct database and select the
+ * correct Context Variable environment. It is also used to automatically decide whether to supply
+ * Context Variables (for Parent jobs only).
+ * 
+ */
+public class ImplicitContextLoadUtils {
+
+	private static Properties properties;
+
+	
+	
+    /**
+     * getImplicitContextParamterValue: used to return the appropriate parameter for the Implicit Context Load
+	 * configuration. 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} Implicit Context Load
+     * 
+     * {param} string("TalendContextDbName") parameter: the parameter name to be returned
+     * {param} string("agh565") rootPID: the root process id
+     * {param} string("agh565") jobPID: the job process id
+     * 
+     * {example} getImplicitContextParamterValue("TalendContextDbName", "adfr54","adfr54") # returns "Talend_Dev"
+     */
+	public static String getImplicitContextParameterValue(String parameter, String rootPID, String jobPID) {
+		String returnVal = "";
+
+		//If the properties are null call the getProperties method to populate the properties
+		if(properties==null){
+			getProperties();
+			
+		}
+				
+		returnVal = properties.getProperty(parameter);
+		
+		//Handles formatting the environment WHERE clause when the TalendContextEnvironment parameter
+		//is requested. This must return a WHERE Clause
+		if(parameter.trim().compareToIgnoreCase("TalendContextEnvironment")==0){
+			//If the jobPID does not equal the rootPID (not a parent job)
+			//ensure no data will be returned
+			if (!jobPID.equals(rootPID)) {
+				returnVal = "env='" + returnVal + "' AND 1=0";
+			}else{
+				returnVal = "env='" + returnVal + "'";
+			}
+		}
+		
+
+		return returnVal;
+	}
+
+	 /**
+     * getProperties: used to populate the properties variable 
+     * 
+     * {talendTypes} void
+     * 
+     * {Category} Implicit Context Load
+     * 
+     * 
+     * {example} getProperties("TalendContextDbName", "adfr54","adfr54") # returns "Talend_Dev"
+     */
+	private static void getProperties() {
+
+		 
+		String propFile = getEnvironmentVariable("TalendConnectionPropertiesFilePath");
+		System.out.println(propFile);
+		String encryptionKey = getEnvironmentVariable("TalendEncryptionKey");
+
+		if (propFile != null) {
+
+			try {
+				/*
+				  * First, create the encryptor for decrypting the values in the .properties file.
+				  */
+				 StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
+				 encryptor.setAlgorithm("PBEWithMD5AndDES"); 
+				 encryptor.setPassword(encryptionKey); 
+				 
+				 /*
+				  * Create our EncryptableProperties object. This is used to decrypt
+				  * and variables surrounded by "ENC(" and ")"
+				  */
+				 properties = new EncryptableProperties(encryptor);
+				 File file = new File(propFile);
+				 FileInputStream fileInput = new FileInputStream(file);
+				 properties.load(fileInput);
+  				 fileInput.close();
+
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	
+    /**
+     * getEnvironmentVariable: used to retrieve Environment Variables
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} Implicit Context Load
+     * 
+     * {param} string("TalendContextPassword") variableName: the parameter name to be returned
+
+     * 
+     * {example} getEnvironmentVariable("TalendContextPassword") # returns "My Password"
+     */
+	public static String getEnvironmentVariable(String variableName) {
+		String returnVal = System.getenv(variableName);
+
+		if (returnVal == null) {
+			System.out.println(variableName
+					+ " does not exist or holds no value");
+		}
+
+		return returnVal;
+	}
+
+	/**
+     * getJVMParameter: used to retrieve JVM Parameters (not currently used)
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} Implicit Context Load
+     * 
+     * {param} string("TalendContextPassword") variableName: the parameter name to be returned
+
+     * 
+     * {example} getJVMParameter("TalendContextPassword") # returns "My Password"
+     */
+	public static String getJVMParameter(String paramName) {
+		String returnVal = System.getProperty(paramName);
+
+		return returnVal;
+	}
+
+}
